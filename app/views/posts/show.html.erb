@@ -1,0 +1,9 @@
+<div class='post'>
+    <h2><%= @post.title %></h2>
+    <p><%= @post.content %></p>
+    <small class='byline'>
+        By <%= @post.author %> on <%= @post.created_at %>
+    </small>
+</div>
+
+<%= link_to "< Back to list", root_path %>

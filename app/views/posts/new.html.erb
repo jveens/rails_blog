@@ -1,0 +1,36 @@
+<!-- <form action='/posts' method="POST">
+  <label for='title'>Title</label>
+  <input type='text' id='title' name='post[title]' />
+  <label for='content'>Title</label>
+  <textarea name='post[content]' id='content'></textarea>
+  <label for='title'>Title</label>
+  <input type='text' name='post[author]' id='title'/>
+  <label for='category'>Title</label>
+  <input type='text' name='post[category]' id='category'/>
+</form>
+
+
+<%= form_tag '/posts', method: "POST" do %>
+  <label for='title'>Title</label>
+  <input type='text' id='title' name='post[title]' />
+  <label for='content'>Title</label>
+  <textarea name='post[content]' id='content'></textarea>
+  <label for='title'>Title</label>
+  <input type='text' name='post[author]' id='title'/>
+  <label for='category'>Title</label>
+  <input type='text' name='post[category]' id='category'/>
+<% end %> -->
+
+
+<%= form_for @post do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+
+    <%= f.submit %>
+<% end %>

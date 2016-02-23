@@ -1,0 +1,13 @@
+<div class='post-list'>
+    <% @posts.each do |post| %>
+        <div class='post'>
+            <h2>
+                <%= link_to post.title, post %>
+            </h2>
+            <p><%= post.lead %></p>
+            <small class='byline'>
+                By <%= post.author %> on <%= post.created_at %>
+            </small>
+        </div>
+    <% end %>
+</div>
